@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Séquence pour les codes étudiants -->
+        <record id="seq_student_code" model="ir.sequence">
+            <field name="name">Student Code Sequence</field>
+            <field name="code">academy.student.code</field>
+            <field name="prefix">STU</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+        </record>
+
+        <!-- Création d'étudiants de démo -->
+        <record id="student_alice" model="academy.student">
+            <field name="student_code">STU001</field>
+            <field name="first_name">Alice</field>
+            <field name="last_name">Johnson</field>
+            <field name="email">alice.johnson@student.academy.com</field>
+            <field name="phone">+1 234 567 890</field>
+            <field name="birth_date">2000-05-15</field>
+            <field name="enrollment_date">2024-01-10</field>
+        </record>
+
+        <record id="student_bob" model="academy.student">
+            <field name="student_code">STU002</field>
+            <field name="first_name">Bob</field>
+            <field name="last_name">Smith</field>
+            <field name="email">bob.smith@student.academy.com</field>
+            <field name="phone">+1 098 765 432</field>
+            <field name="birth_date">2001-03-22</field>
+            <field name="enrollment_date">2024-01-15</field>
+        </record>
+
+        <record id="student_charlie" model="academy.student">
+            <field name="student_code">STU003</field>
+            <field name="first_name">Charlie</field>
+            <field name="last_name">Brown</field>
+            <field name="email">charlie.brown@student.academy.com</field>
+            <field name="birth_date">1999-11-30</field>
+            <field name="enrollment_date">2024-02-01</field>
+            <field name="is_active" eval="False"/>
+        </record>
+    </data>
+</odoo>

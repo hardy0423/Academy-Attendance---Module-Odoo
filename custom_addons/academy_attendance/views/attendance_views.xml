@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Calendar View -->
+    <record id="view_academy_attendance_calendar" model="ir.ui.view">
+        <field name="name">academy.attendance.calendar</field>
+        <field name="model">academy.attendance</field>
+        <field name="arch" type="xml">
+            <calendar string="Attendance Calendar"
+                      date_start="start_time"
+                      date_stop="end_time"
+                      color="student_id"
+                      mode="month">
+                <field name="name"/>
+                <field name="student_id"/>
+                <field name="course_id"/>
+                <field name="status"/>
+            </calendar>
+        </field>
+    </record>
+</odoo>

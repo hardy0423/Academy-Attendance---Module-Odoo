@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!-- Actions -->
+    <record id="action_academy_course" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="res_model">academy.course</field>
+        <field name="view_mode">tree,form,kanban,calendar</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first course!
+            </p>
+        </field>
+    </record>
+
+    <record id="action_academy_course_kanban" model="ir.actions.act_window">
+        <field name="name">Courses Kanban</field>
+        <field name="res_model">academy.course</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_id" ref="view_academy_course_kanban"/>
+    </record>
+
+    <record id="action_academy_student" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="res_model">academy.student</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record id="action_academy_attendance" model="ir.actions.act_window">
+        <field name="name">Attendance Records</field>
+        <field name="res_model">academy.attendance</field>
+        <field name="view_mode">tree,form,calendar</field>
+    </record>
+
+    <record id="action_academy_attendance_calendar" model="ir.actions.act_window">
+        <field name="name">Attendance Calendar</field>
+        <field name="res_model">academy.attendance</field>
+        <field name="view_mode">calendar,tree,form</field>
+        <field name="view_id" ref="view_academy_attendance_calendar"/>
+    </record>
+
+
+        <!-- Menu Principal -->
+    <menuitem id="menu_academy_root" 
+              name="Academy" 
+              sequence="10"/>
+    
+    <!-- Sous-menu Cours -->
+    <menuitem id="menu_academy_courses" 
+              name="Courses" 
+              parent="menu_academy_root" 
+              sequence="10"/>
+    
+    <menuitem id="menu_academy_courses_list" 
+              name="All Courses" 
+              parent="menu_academy_courses" 
+              action="action_academy_course"
+              sequence="10"/>
+    
+    <menuitem id="menu_academy_courses_kanban" 
+              name="Kanban View" 
+              parent="menu_academy_courses" 
+              action="action_academy_course_kanban"
+              sequence="20"/>
+    
+    <!-- Sous-menu Étudiants -->
+    <menuitem id="menu_academy_students" 
+              name="Students" 
+              parent="menu_academy_root" 
+              sequence="20"/>
+    
+    <menuitem id="menu_academy_students_list" 
+              name="All Students" 
+              parent="menu_academy_students" 
+              action="action_academy_student"
+              sequence="10"/>
+    
+    <!-- Sous-menu Présences -->
+    <menuitem id="menu_academy_attendance" 
+              name="Attendance" 
+              parent="menu_academy_root" 
+              sequence="30"/>
+    
+    <menuitem id="menu_academy_attendance_list" 
+              name="Attendance Records" 
+              parent="menu_academy_attendance" 
+              action="action_academy_attendance"
+              sequence="10"/>
+    
+    <menuitem id="menu_academy_attendance_calendar" 
+              name="Calendar View" 
+              parent="menu_academy_attendance" 
+              action="action_academy_attendance_calendar"
+              sequence="20"/>
+</odoo>

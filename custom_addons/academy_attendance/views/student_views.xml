@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================= -->
+    <!-- VUE DES ÉTUDIANTS -->
+    <!-- ========================= -->
+
+    <!-- Tree View -->
+    <record id="view_academy_student_list" model="ir.ui.view">
+        <field name="name">academy.student.list</field>
+        <field name="model">academy.student</field>
+        <field name="arch" type="xml">
+            <list string="Students">
+                <field name="student_code"/>
+                <field name="full_name"/>
+                <field name="email"/>
+                <field name="enrollment_date"/>
+                <field name="attendance_rate" widget="progressbar"/>
+                <field name="is_active" invisible="1"/>
+                <field name="is_active" widget="boolean_button" options='{"terminology": "active"}'/>
+            </list>
+        </field>
+    </record>
+</odoo>
