@@ -1,4 +1,3 @@
-```markdown
 # Academy Manager
 
 Academy Manager is a comprehensive Odoo 19 module designed to manage courses, students, and attendance records. The module provides tree, form, kanban, and calendar views for efficient administration of educational activities.
@@ -27,6 +26,9 @@ Academy Manager is a comprehensive Odoo 19 module designed to manage courses, st
   - Includes demo students and sample courses for testing.
 
 ## Module Structure
+
+## Module Structure
+
 ```
 
 academy_manager/
@@ -64,4 +66,3 @@ academy_manager/
 - Navigate to **Academy → Courses** to create and manage courses.
 - Navigate to **Academy → Students** to manage student profiles.
 - Navigate to **Academy → Attendance** to record and view attendance data.
-```
